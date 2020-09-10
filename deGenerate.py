@@ -29,10 +29,6 @@ def logout(url_prefix):
     response = session.post(url_prefix+'/web/login/logout.do')
     return response.json()
 
-def save_topology(url_prefix):
-    response = session.post(url_prefix+'/cvpservice/provisioning/v2/saveTopology.do', data=json.dumps([]))
-    return response.json()
-
 def get_configlets(url_prefix):
     response = session.get(url_prefix+'/cvpservice/configlet/getConfiglets.do?type=Generated&startIndex=0&endIndex=0')
     return response.json()
