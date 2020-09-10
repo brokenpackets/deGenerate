@@ -7,7 +7,7 @@ username = 'admin'
 password = 'Arista123'
 server1 = 'https://192.168.255.50'
 
-###### Do not modify anything below this line. Or do, I'm not a cop.
+######
 connect_timeout = 10
 headers = {"Accept": "application/json",
            "Content-Type": "application/json"}
