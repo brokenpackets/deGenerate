@@ -6,6 +6,7 @@ import json
 username = 'admin'
 password = 'Arista123'
 server1 = 'https://192.168.255.50'
+dryrun = True
 
 ######
 connect_timeout = 10
@@ -47,6 +48,7 @@ for item in output['data']:
         configlet_name = item['name']
         configlet_key = item['key']
         print item
-        configlet_to_delete = delete_configlet(server1,configlet_key,configlet_name)
-        print configlet_to_delete
+        if dryrun == False:
+           configlet_to_delete = delete_configlet(server1,configlet_key,configlet_name)
+           print configlet_to_delete
 logout(server1)
